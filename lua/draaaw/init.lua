@@ -4,7 +4,7 @@ function M.visual_selection_range()
     local _, start_row, start_col, _ = unpack(vim.fn.getpos("'<"))
     local _, end_row, end_col, _ = unpack(vim.fn.getpos("'>"))
     local coords = string.format('[%d %d] - [%d %d]', start_row, start_col, end_row, end_col)
-    vim.cmd('echo "' .. coords .. '"')
+    print(coords)
 end
 
 function M.draw_box()
